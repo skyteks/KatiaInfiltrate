@@ -1,9 +1,14 @@
 fileFormatVersion: 2
 guid: 5a5983eba069e6241ba46e3f1f80d8d6
-timeCreated: 1517077619
+timeCreated: 1517692352
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: background_magesGuild_1Floor_interior_0
+    21300002: background_magesGuild_1Floor_interior_1
+    21300004: background_magesGuild_1Floor_interior_2
+    21300006: background_magesGuild_1Floor_interior_3
+    21300008: background_magesGuild_1Floor_interior_4
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -88,7 +93,77 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: background_magesGuild_1Floor_interior_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 442
+        width: 273
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: background_magesGuild_1Floor_interior_1
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 94
+        width: 624
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: background_magesGuild_1Floor_interior_2
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 27
+        width: 244
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: background_magesGuild_1Floor_interior_3
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 472
+        width: 403
+        height: 389
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: background_magesGuild_1Floor_interior_4
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 474
+        width: 257
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 

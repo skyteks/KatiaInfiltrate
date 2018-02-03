@@ -4,4 +4,22 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/intro.unity
+    guid: 1681bf07b58ccc44caccc383b07ee920
+  - enabled: 1
+    path: Assets/town.unity
+    guid: 0507c5bff81996746a6daa27a8445ffe
+  - enabled: 1
+    path: Assets/chapel.unity
+    guid: 5f33e1cb6034c034cbbc98428a008796
+  - enabled: 1
+    path: Assets/throneroom.unity
+    guid: 91f31a5eb63a0c14dab6c430398ffade
+  - enabled: 1
+    path: Assets/cliffs.unity
+    guid: c6bcc8bb533232e43b72df7ff76139eb
+  - enabled: 1
+    path: Assets/basement.unity
+    guid: 7ce49e93953d3e94ba35555655d87ac0

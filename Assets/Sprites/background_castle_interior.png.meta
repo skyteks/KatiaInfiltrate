@@ -1,9 +1,15 @@
 fileFormatVersion: 2
 guid: af2ca974f94fc6d48aa5b8218a5ef170
-timeCreated: 1517077621
+timeCreated: 1517692644
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: background_castle_interior_0
+    21300002: background_castle_interior_1
+    21300004: background_castle_interior_2
+    21300006: background_castle_interior_3
+    21300008: background_castle_interior_4
+    21300010: background_castle_interior_5
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -88,7 +94,77 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: background_castle_interior_0
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 934
+        width: 254
+        height: 294
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: background_castle_interior_1
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 604
+        width: 248
+        height: 298
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: background_castle_interior_2
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 560
+        width: 262
+        height: 279
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: background_castle_interior_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1199
+        width: 1196
+        height: 237
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: background_castle_interior_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 976
+        width: 1169
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 
