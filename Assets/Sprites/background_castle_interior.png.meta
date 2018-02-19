@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: af2ca974f94fc6d48aa5b8218a5ef170
-timeCreated: 1517692644
+timeCreated: 1519077796
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -10,6 +10,8 @@ TextureImporter:
     21300006: background_castle_interior_3
     21300008: background_castle_interior_4
     21300010: background_castle_interior_5
+    21300012: background_castle_interior_6
+    21300014: background_castle_interior_7
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -99,12 +101,12 @@ TextureImporter:
       name: background_castle_interior_0
       rect:
         serializedVersion: 2
-        x: 1197
-        y: 934
-        width: 254
-        height: 294
+        x: 0
+        y: 946
+        width: 1211
+        height: 242
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -113,12 +115,12 @@ TextureImporter:
       name: background_castle_interior_1
       rect:
         serializedVersion: 2
-        x: 1212
-        y: 604
-        width: 248
-        height: 298
+        x: 0
+        y: 583
+        width: 235
+        height: 275
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -127,12 +129,12 @@ TextureImporter:
       name: background_castle_interior_2
       rect:
         serializedVersion: 2
-        x: 947
-        y: 560
-        width: 262
-        height: 279
+        x: 260
+        y: 584
+        width: 274
+        height: 277
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -141,12 +143,12 @@ TextureImporter:
       name: background_castle_interior_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1199
-        width: 1196
-        height: 237
+        x: 599
+        y: 581
+        width: 240
+        height: 278
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -155,12 +157,54 @@ TextureImporter:
       name: background_castle_interior_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 976
-        width: 1169
-        height: 223
+        x: 1523
+        y: 9
+        width: 1467
+        height: 877
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: background_castle_interior_5
+      rect:
+        serializedVersion: 2
+        x: 1892
+        y: 949
+        width: 1108
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: background_castle_interior_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 50
+        width: 629
+        height: 466
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: background_castle_interior_7
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 0
+        width: 590
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
