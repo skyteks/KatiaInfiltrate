@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private float y;
 
     [SerializeField]
-    private DialogueTrigger dialogueTrigger;
+    private ITrigger trigger;
     private DialogueManager dialogueManager;
 
     private Vector2 destination;
@@ -37,9 +37,10 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))//GetButtonDown("Jump"))
             {
-                if (dialogueTrigger != null)
+                if (trigger != null)
                 {
-                    dialogueTrigger.TriggerDialogue();
+                    StopMoving();
+                    trigger.Trigger();
                 }
             }
 
@@ -86,23 +87,21 @@ public class PlayerMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        //gotoDestination = false;
-        //x = 0;
-        //y = 0;
+        //StopMoving();
 
-        DialogueTrigger trigger = other.GetComponent<DialogueTrigger>();
-        if (trigger != null) dialogueTrigger = trigger;
+        ITrigger tmp = other.GetComponent<ITrigger>();
+        if (tmp != null) trigger = tmp;
         //Debug.Log("Entered trigger");
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        DialogueTrigger trigger = other.GetComponent<DialogueTrigger>();
-        if (trigger != null && trigger == dialogueTrigger) dialogueTrigger = null;
+        ITrigger tmp = other.GetComponent<ITrigger>();
+        if (tmp != null && tmp == trigger) trigger = null;
         //Debug.Log("Left trigger");
     }
 
-    private void OnDrawGizmos()
+    void OnDrawGizmos()
     {
         coll = GetComponent<CircleCollider2D>();
 
@@ -118,5 +117,12 @@ public class PlayerMovement : MonoBehaviour
 
         Gizmos.color = Color.blue;
         Gizmos.DrawSphere(transform.position + new Vector3(x, y), coll.radius);
+    }
+
+    private void StopMoving()
+    {
+        gotoDestination = false;
+        x = 0;
+        y = 0;
     }
 }

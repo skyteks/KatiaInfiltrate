@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class DialogueTrigger : MonoBehaviour
+public class DialogueTrigger : MonoBehaviour, ITrigger
 {
     public Conversation dialogue;
 
     public UnityEvent afterDialogFollowEvent;
     public bool finished { set; get; }
 
-    public void TriggerDialogue()
+    public void Trigger()
     {
-        var dialogueManager = FindObjectOfType<DialogueManager>();
+        DialogueManager dialogueManager = FindObjectOfType<DialogueManager>();
         if (dialogueManager.dialogueRunning)
         {
             dialogueManager.DisplayNextSentence(this);
