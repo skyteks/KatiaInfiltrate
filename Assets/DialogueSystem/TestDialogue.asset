@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 310925fb23e4b6949b0f19ac7ab95941, type: 3}
   m_Name: TestDialogue
   m_EditorClassIdentifier: 
+  loopLast: 1
   dialogues:
   - sentence: I am Mask
     portrait: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}

@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private float x;
     private float y;
 
+    [SerializeField]
     private DialogueTrigger dialogueTrigger;
     private DialogueManager dialogueManager;
 
@@ -34,30 +35,23 @@ public class PlayerMovement : MonoBehaviour
     {
         if (dialogueManager != null)
         {
-            if (Input.GetButtonDown("Jump"))
+            if (Input.GetKeyDown(KeyCode.Space))//GetButtonDown("Jump"))
             {
-                if (dialogueManager.dialogueRunning)
+                if (dialogueTrigger != null)
                 {
-                    dialogueManager.DisplayNextSentence();
-                }
-                else
-                {
-                    if (dialogueTrigger != null)
-                    {
-                        dialogueTrigger.TriggerDialogue();
-                    }
+                    dialogueTrigger.TriggerDialogue();
                 }
             }
 
             if (dialogueManager.dialogueRunning) return;
         }
 
-        if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
-        {
-            x = Input.GetAxis("Horizontal");
-            y = Input.GetAxis("Vertical");
-            gotoDestination = false;
-        }
+        //if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
+        //{
+        //    x = Input.GetAxis("Horizontal");
+        //    y = Input.GetAxis("Vertical");
+        //    gotoDestination = false;
+        //}
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -69,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
         if (gotoDestination)
         {
             Vector3 direction = (Vector3)destination - transform.position;
-            Debug.Log("dir: " + direction);
+            //Debug.Log("dir: " + direction);
             Debug.DrawLine(transform.position, destination, Color.red);
             Vector2 step = direction.magnitude > 1f ? direction.normalized : direction;
             x = step.x;
@@ -92,9 +86,9 @@ public class PlayerMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        gotoDestination = false;
-        x = 0;
-        y = 0;
+        //gotoDestination = false;
+        //x = 0;
+        //y = 0;
 
         DialogueTrigger trigger = other.GetComponent<DialogueTrigger>();
         if (trigger != null) dialogueTrigger = trigger;

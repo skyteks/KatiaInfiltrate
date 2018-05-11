@@ -5,6 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "ScriptableObject Asset/Dialogue", fileName = "new Dialogue")]
 public class Conversation : ScriptableObject
 {
-	public Dialogue[] dialogues;
-	
+    public bool loopLast;
+    public Dialogue[] dialogues;
 }
