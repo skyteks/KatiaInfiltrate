@@ -17,7 +17,7 @@ public class DialogueManager : MonoBehaviour
 
     void Start()
     {
-        GetComponentInChildren<Canvas>().gameObject.SetActive(true);
+        GetComponentInChildren<Canvas>(true).gameObject.SetActive(true);
         dialogues = new Queue<Dialogue>();
         EndDialogue(null);
     }

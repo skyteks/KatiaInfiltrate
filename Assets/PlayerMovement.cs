@@ -15,7 +15,6 @@ public class PlayerMovement : MonoBehaviour
     private float x;
     private float y;
 
-    [SerializeField]
     private ITrigger trigger;
     private DialogueManager dialogueManager;
 
@@ -33,18 +32,13 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (dialogueManager != null)
+        if (dialogueManager != null && dialogueManager.dialogueRunning)
         {
-            if (Input.GetKeyDown(KeyCode.Space))//GetButtonDown("Jump"))
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
             {
-                if (trigger != null)
-                {
-                    StopMoving();
-                    trigger.Trigger();
-                }
+                ActivateTrigger();
             }
-
-            if (dialogueManager.dialogueRunning) return;
+            return;
         }
 
         //if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
@@ -60,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
             //RaycastHit2D hit = Physics2D.CircleCast(transform.position, coll.radius, curserPos, Vector2.Distance(transform.position, Input.mousePosition), layerMask);
             destination = curserPos;//hit.point != Vector2.zero ? curserPos : hit.point;
             gotoDestination = true;
+            Debug.Log("Distance: " + Vector2.Distance(destination, transform.position));
         }
         if (gotoDestination)
         {
@@ -82,6 +77,12 @@ public class PlayerMovement : MonoBehaviour
         if (Mathf.Abs(y) > 0.1f)
         {
             rigid.AddForce(y * Vector3.up * Time.fixedDeltaTime * speed);
+        }
+        if (rigid.velocity.magnitude < 0.01f && gotoDestination
+            && Vector2.Distance(destination, transform.position) < 2f)
+        {
+            ActivateTrigger();
+            gotoDestination = false;
         }
     }
 
@@ -124,5 +125,16 @@ public class PlayerMovement : MonoBehaviour
         gotoDestination = false;
         x = 0;
         y = 0;
+    }
+
+    private bool ActivateTrigger()
+    {
+        if (trigger != null)
+        {
+            StopMoving();
+            trigger.Trigger();
+            return true;
+        }
+        return false;
     }
 }
